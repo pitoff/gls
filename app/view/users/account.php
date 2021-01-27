@@ -42,7 +42,7 @@
 	                        <!-- <a href="<?php echo URLROOT;?>/users/transfer/<?php echo $all->depositId;?>"> --><button class="btn btn-primary" type="submit" disabled="disabled" style="margin-top: 10px;">Transfer Funds</button>
   							         </td>
                       </section>
-                      <div>Dear <?php echo $all->firstname;?> your account has been restricted due to inactivity!</div>
+                      <div>Dear <?php echo $data['user']->firstname;?> your account has been restricted due to inactivity!</div>
                   </div>
 			  </div>
 		</section>
