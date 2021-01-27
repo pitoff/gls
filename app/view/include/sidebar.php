@@ -33,6 +33,12 @@
                           <span>Withdraws</span>
                       </a>
                   </li>
+		  <li>
+                      <a class="" href="<?php echo URLROOT;?>/users/logout">
+                          <i class="icon_key_alt"></i>
+                          <span>Logout</span>
+                      </a>
+                  </li>
 <!--                   <li>                     
                       <a class="" href="chart-chartjs.html">
                           <i class="icon_piechart"></i>
