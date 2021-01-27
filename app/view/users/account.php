@@ -11,14 +11,14 @@
 				</div>
 			  </div>
 
-		  	<div class = "container">
+<div class="container">
 			  	<div class="row">
 			  	   <div class="col-lg-12">
-                      <section class="table-responsive">
+                      <div class="table-responsive">
                           <header class="panel-heading">
                               Checking & Savings
                           </header>
-                          <table class="table table-hover">
+                          <table class="table table-hover table-condensed">
                               <thead>
                               <tr>
                               	  <th>Acc number</th>
@@ -42,13 +42,14 @@
                           <td>
 	                        <!-- <a href="<?php echo URLROOT;?>/users/transfer/<?php echo $all->depositId;?>"> --><button class="btn btn-primary" type="submit" disabled="disabled" style="margin-top: 10px;">Transfer Funds</button>
   							         </td>
-                      </section>
+                      </div>
                       <div>Dear <?php echo $data['user']->firstname;?> your account has been restricted due to inactivity!</div>
                   </div>
 			  </div>
-		  </div>
+        </div>
 		</section>
 </section>
+
 
 
 <?php require APPROOT .'/view/include/footer'. '.php';?>
