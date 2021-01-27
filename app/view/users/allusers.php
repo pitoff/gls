@@ -9,9 +9,8 @@
 						<li><i class="fa fa-list"></i>All</li>						  	
 					</ol>
 				</div>
-			  </div>
+			  
 
-			  <div class="row">
 			  	   <div class="col-lg-12">
                       <section class="table-responsive">
                           <!-- <header class="panel-heading">
@@ -51,9 +50,9 @@
                                   </td>
                                   <td>
 	                                <form action="<?php echo URLROOT;?>/users/deleteuser/<?php echo $users->id;?>" method="POST">
-	  									<button type="submit" style="border: none; margin-left: 20px;"><span class="icon_trash_alt" style="color: red;"></span></button>
-	  								</form>
-  								  </td>
+	  				<button type="submit" style="border: none; margin-left: 20px;"><span class="icon_trash_alt" style="color: red;"></span></button>
+	  				 </form>
+  				</td>
                               </tr>
                           	<?php endforeach;?>
                               </tbody>
@@ -64,4 +63,4 @@
 
 			</section>
 </section>
-<?php require APPROOT .'/view/include/footer'. '.php';?> 
+<?php require APPROOT .'/view/include/footer'. '.php';?>  
