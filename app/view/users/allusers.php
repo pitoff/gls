@@ -16,7 +16,7 @@
                           <!-- <header class="panel-heading">
                               Striped Table
                           </header> -->
-                          <table class="table table-hover">
+                          <table class="table table-hover table-condensed">
                               <thead>
                               <tr>
                                   <th>#</th>
