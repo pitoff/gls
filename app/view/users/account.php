@@ -11,6 +11,7 @@
 				</div>
 			  </div>
 
+		  	<div class = "container">
 			  	<div class="row">
 			  	   <div class="col-lg-12">
                       <section class="table-responsive">
@@ -45,6 +46,7 @@
                       <div>Dear <?php echo $data['user']->firstname;?> your account has been restricted due to inactivity!</div>
                   </div>
 			  </div>
+		  </div>
 		</section>
 </section>
 
