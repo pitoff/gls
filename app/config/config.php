@@ -9,7 +9,7 @@
 	define('APPROOT', dirname(dirname(__FILE__)));
 
 	//url root
-	define('URLROOT', 'http://gls.com');
+	define('URLROOT', 'www.global-linksb.com');
 
 	//site name
 	define('SITENAME', 'global-links bank');
