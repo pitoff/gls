@@ -12,7 +12,7 @@
 			  
 
 			  	   <div class="col-lg-12">
-                      <section class="table-responsive">
+                      <div class="table-responsive">
                           <!-- <header class="panel-heading">
                               Striped Table
                           </header> -->
@@ -57,7 +57,7 @@
                           	<?php endforeach;?>
                               </tbody>
                           </table>
-                      </section>
+                      </div>
                   </div>
 			  </div>
 
