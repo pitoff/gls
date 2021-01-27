@@ -55,20 +55,7 @@
   background-size: cover;
 
 }
-  .login-wrap{
-    background: url('./NiceAdmin/img/home.jpg') no-repeat center center fixed !important; 
-
-  -webkit-background-size: cover;
-
-  -moz-background-size: cover;
-
-  -o-background-size: cover;
-
-  background-size: cover;
-  }
-
-
-  </style>
+</style>
 <body class="login-img3-body">
 
     <div class="container">
