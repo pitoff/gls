@@ -3,14 +3,15 @@
           <section class="wrapper">            
               <!--overview start-->
 			  <div class="row" style="margin-top: 20px;">
-				<div class="col-lg-12">
-					<ol class="breadcrumb">
-						<li><i class="fa fa-list"></i><a href="index.html">Users</a></li>
-						<li><i class="fa fa-bank"></i>Account Summary</li>						  	
-					</ol>
-				</div>
+  				<div class="col-lg-12">
+  					<ol class="breadcrumb">
+  						<li><i class="fa fa-list"></i><a href="index.html">Users</a></li>
+  						<li><i class="fa fa-bank"></i>Account Summary</li>						  	
+  					</ol>
+  				</div>
+        </div>
 
-
+            <div class="row">
 			  	   <div class="col-lg-12">
                       <div class="table-responsive">
                           <header class="panel-heading">
@@ -22,6 +23,7 @@
                               	  <th>Acc number</th>
                                   <th>current balance</th>
                                   <th>availabe balance</th>
+                                  <th>last transaction</th>
                               </tr>
                               </thead>
                             <?php foreach($data['all'] as $all):?>
@@ -31,6 +33,7 @@
                               	  <td><?php echo $all->acc_num;?></td>
                                   <td>&#36;<?php echo number_format($all->current_bal, 2);?></td>
                                   <td>&#36;<?php echo number_format($all->available_bal, 2);?></td>
+                                  <td><?php echo $all->dod;?></td>
                               </tr>
                               </tbody>
                           <?php endif;?>
@@ -43,7 +46,7 @@
                       </div>
                       <div>Dear <?php echo $data['user']->firstname;?> your account has been restricted due to inactivity!</div>
                   </div>
-			  </div>
+                </div>
 		</section>
 </section>
 
