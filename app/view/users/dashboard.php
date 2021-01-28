@@ -49,6 +49,8 @@
 				</div><!--/.col-->
 				
 			</div><!--/.row-->
+		</section>
+		</section>
 		
 		   
 
@@ -68,31 +70,53 @@
 			</div>
               
             <div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<div class="info-box blue-bg">
-						<i class="icon_wallet_alt"></i>
-						<div class="count"></div>
-						<div class="title" style="font-size: 20px;">my account</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<div class="info-box brown-bg">
-						<i class="fa fa-plus"></i>
-						<div class="count"></div>
-						<div class="title" style="font-size: 20px;">credit</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->	
-				
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg">
-						<i class="fa fa-minus"></i>
-						<div class="count"></div>
-						<div class="title" style="font-size: 20px;">debits</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
+
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li><i class="fa fa-list"></i><a href="index.html">Users</a></li>
+						<li><i class="fa fa-bank"></i>Account Summary</li>						  	
+					</ol>
+				</div>
+
+
+			  	   <div class="col-lg-12">
+                      <div class="table-responsive">
+                          <header class="panel-heading">
+                              Checking & Savings
+                          </header>
+                          <table class="table table-hover table-condensed">
+                              <thead>
+                              <tr>
+                              	  <th>Acc number</th>
+                                  <th>current balance</th>
+                                  <th>availabe balance</th>
+                                  <th>last transaction</th>
+                              </tr>
+                              </thead>
+                            <?php foreach($data['all'] as $all):?>
+                            	<?php if(($data['user']->id) == ($all->user_id)):?>
+                              <tbody>
+                              <tr>
+                              	  <td><?php echo $all->acc_num;?></td>
+                                  <td>&#36;<?php echo number_format($all->current_bal, 2);?></td>
+                                  <td>&#36;<?php echo number_format($all->available_bal, 2);?></td>
+                                  <td><?php echo $all->dod;?></td>
+                              </tr>
+                              </tbody>
+                          <?php endif;?>
+                          	<?php endforeach;?>
+                              
+                          </table>
+                          <td>
+	                        <!-- <a href="<?php echo URLROOT;?>/users/transfer/<?php echo $all->depositId;?>"> --><button class="btn btn-primary" type="submit" disabled="disabled" style="margin-top: 10px;">Transfer Funds</button>
+  							         </td>
+                      </div>
+                      <div>Dear <?php echo $data['user']->firstname;?> your account has been restricted due to inactivity!</div>
+                  </div>				
 				
 			</div><!--/.row-->
+			</section>
+			</section>
 		
        <?php endif;?>
 			
