@@ -9,9 +9,7 @@
   						<li><i class="fa fa-bank"></i>Account Summary</li>						  	
   					</ol>
   				</div>
-        </div>
 
-            <div class="row">
 			  	   <div class="col-lg-12">
                       <div class="table-responsive">
                           <header class="panel-heading">
