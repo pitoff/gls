@@ -71,17 +71,12 @@
 			redirect('users');
 		}
 
-		public function dashboard($id){
+		public function dashboard(){
 			if (!isLoggedIn()) {
 				redirect('users');
+			}else{
+				$this->view('users/dashboard');
 			}
-			$user = $this->userModel->getUserById($id);
-			$all = $this->userModel->alldeposit($user->id);
-			$data = [
-				'user' => $user,
-				'all' => $all
-			];
-			$this->view('users/dashboard', $data);
 		}
 
 		public function adduser(){
