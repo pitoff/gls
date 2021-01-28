@@ -84,7 +84,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                   <li class="active">
-                      <a class="" href="<?php echo URLROOT;?>/users/dashboard/<?php echo $_SESSION['user_id'];?>">
+                      <a class="" href="<?php echo URLROOT;?>/users/dashboard">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -95,12 +95,12 @@
                           <span>My profile</span>
                       </a>
                   </li>
-                  <!-- <li class="sub-menu">
+                  <li class="sub-menu">
                       <a href="<?php echo URLROOT;?>/users/account/<?php echo $_SESSION['user_id'];?>" class="">
                           <i class="icon_creditcard"></i>
                           <span>My account</span>
                       </a>
-                  </li> -->
+                  </li>
                   <!-- <li class="sub-menu">
                       <a href="<?php echo URLROOT;?>/users/transfer/<?php echo $_SESSION['user_id'];?>" class="">
                           <i class="arrow_expand"></i>
