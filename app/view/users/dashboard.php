@@ -70,6 +70,7 @@
 			</div>
               
             <div class="row">
+		    <a href="<?php echo URLROOT;?>/users/account/<?php echo $_SESSION['user_id'];?>">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<div class="info-box blue-bg">
 						<i class="icon_wallet_alt"></i>
@@ -77,15 +78,18 @@
 						<div class="title" style="font-size: 20px;">my account</div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->
-				
+		    </a>
+				<a href="<?php echo URLROOT;?>/users/dashboard">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<div class="info-box brown-bg">
 						<i class="fa fa-plus"></i>
 						<div class="count"></div>
 						<div class="title" style="font-size: 20px;">credit</div>						
 					</div><!--/.info-box-->			
-				</div><!--/.col-->	
+				</div><!--/.col-->
+		    </a>
 				
+		    <a href="<?php echo URLROOT;?>/users/dashboard">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<div class="info-box dark-bg">
 						<i class="fa fa-minus"></i>
@@ -93,6 +97,7 @@
 						<div class="title" style="font-size: 20px;">debits</div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->
+		    </a>
 				
 			</div><!--/.row-->
 			</section>
