@@ -24,11 +24,11 @@
 					$data['password_err'] = 'please enter password';
 				}
 
-				if ($this->userModel->findUserByEmail($data['email'])) {
-					//user found
-				}else{
-					$data['email_err'] = 'no user found';
-				}
+				// if ($this->userModel->findUserByEmail($data['email'])) {
+				// 	//user found
+				// }else{
+				// 	$data['email_err'] = 'no user found';
+				// }
 
 				if (empty($data['email_err']) && empty($data['password_err'])) {
 					$loggedInUser = $this->userModel->login($data['email'], $data['password']); 
