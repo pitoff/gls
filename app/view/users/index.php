@@ -60,8 +60,11 @@
 
     <div class="container">
     <a href="<?php echo URLROOT;?>" class="logo"> <?php echo SITENAME;?> </a>
+
+    <div class="login-wrap">
       <form class="login-form" method="POST" action = "<?php echo URLROOT;?>/users/index">        
-        <div class="login-wrap">
+        
+          <div id="errMsg"><em style="text-align: center;"><?= flashdanger('msg');?></em></div>
             <p class="login-img"><i class="icon_lock_alt"></i></p>
             <div class="input-group">
               <span class="input-group-addon"><i class="icon_profile"></i></span>
@@ -71,16 +74,18 @@
                 <span class="input-group-addon"><i class="icon_key_alt"></i></span>
                 <input type="password" name="password" placeholder="Password" class="form-control <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password'];?>"><span class="invalid-feedback" style="color:red;"><?php echo $data['password_err'];?></span>
             </div>
-            <!--<label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>-->
+            
             <button class="btn btn-primary btn-lg btn-block" name="submit" type="submit">Login</button>
-            <!--<button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>-->
-        </div>
-      </form>
-
-
+        
+        </form>
+      </div>
     </div>
 </body>
 <?php require APPROOT .'/view/include/footer'. '.php';?>
+
+<script>
+  function errMsg(){
+    setTimeout(() => document.querySelector('#errMsg').remove(), 5000);
+  }
+  errMsg();
+</script>

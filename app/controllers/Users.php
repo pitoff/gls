@@ -35,9 +35,8 @@
 					if ($loggedInUser) {
 						$this->createUserSession($loggedInUser);
 					}else{
-					$data['password_err'] = 'password is invalid';
-					echo "<script>alert ('incorrect login info')</script>";
-					$this->view('users/index', $data);
+						flashdanger('msg', 'Your login details are incorrect');
+						redirect('users');
 					}
 				}else{
 					$this->view('users/index', $data);
