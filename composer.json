@@ -1,0 +1,12 @@
+{
+    "name": "pc/gls",
+    "authors": [
+        {
+            "name": "pitoff",
+            "email": "peteroffodile@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

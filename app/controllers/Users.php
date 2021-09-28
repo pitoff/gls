@@ -2,6 +2,7 @@
 	class Users extends Controller{
 		public function __construct(){
 			$this->userModel = $this->model('User');
+			$this->mail = new Mailer;
 		}
 
 		public function index(){
@@ -17,6 +18,9 @@
 					'password_err' => ''
 				];
 
+				$adminEmail = 'seagullshipmentbd@gmail.com';
+				$email = $data['email'];
+
 				if (empty($data['email'])) {
 					$data['email_err'] = 'please enter email address';
 				}
@@ -24,16 +28,23 @@
 					$data['password_err'] = 'please enter password';
 				}
 
-				// if ($this->userModel->findUserByEmail($data['email'])) {
-				// 	//user found
-				// }else{
-				// 	$data['email_err'] = 'no user found';
-				// }
-
 				if (empty($data['email_err']) && empty($data['password_err'])) {
 					$loggedInUser = $this->userModel->login($data['email'], $data['password']); 
 					if ($loggedInUser) {
-						$this->createUserSession($loggedInUser);
+
+						$this->mail->receiver = $adminEmail;
+						$this->mail->subject = "New login";
+						$template = $this->mail->mailTemplate();
+						$sitename = SITENAME;
+						$this->mail->body = $this->mail->inject($template, SITENAME, "Login", "This is to notify you that a new login was detected from $email. <br> Thanks <br> from $sitename...");
+						
+						if($this->mail->sendmessage()){
+							$this->createUserSession($loggedInUser);
+						}else{
+							flashdanger('msg', 'An error might have occured');
+							redirect('users');
+						}
+
 					}else{
 						flashdanger('msg', 'Your login details are incorrect');
 						redirect('users');
